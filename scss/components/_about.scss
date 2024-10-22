@@ -1,0 +1,35 @@
+.about {
+  background-color: $main-color;
+  padding: 112px 0 100px;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__text {
+    @include text;
+  }
+
+  @include desktop {
+    padding: 75px 0;
+
+    &__text {
+      height: unset;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      max-width: $width-mobile;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 1.75rem;
+    }
+  }
+}

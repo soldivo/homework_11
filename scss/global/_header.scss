@@ -1,0 +1,142 @@
+.header {
+  @include center($desktop, 80px auto);
+  background-color: $work-bg-color;
+
+  .navbar__btn {
+    width: 30px;
+    height: 22px;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    .navbar__btn.active span:nth-child(1) {
+      top: 9px;
+      transform: rotate(135deg);
+    }
+
+    .navbar__btn.active span:nth-child(2) {
+      opacity: 0;
+      left: -30px;
+    }
+
+    .navbar__btn.active span:nth-child(3) {
+      top: 9px;
+      transform: rotate(-135deg);
+    }
+
+    .navbar__btn-row {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+      opacity: 1;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+    }
+
+    .navbar__btn-row:nth-child(1) {
+      top: 0;
+    }
+
+    .navbar__btn-row:nth-child(2) {
+      top: 9px;
+    }
+
+    .navbar__btn-row:nth-child(3) {
+      top: 18px;
+    }
+  }
+
+  .navbar {
+    margin-bottom: 162px;
+
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+
+    &__item {
+      @include size-height();
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+
+    &__link {
+      display: block;
+      text-decoration: none;
+      color: $default-color;
+      padding: 10px;
+      transition: color 0.5s;
+      cursor: pointer;
+    }
+
+    &__link:hover,
+    &__link--active:active {
+      background-color: $additional-color;
+    }
+
+    &__link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include navbar {
+    .navbar__list {
+      display: none;
+      margin-top: 30px;
+    }
+  }
+
+  @include desktop {
+    margin: 75px auto;
+    padding: 0 20px;
+
+    &__list {
+      justify-content: center;
+    }
+  }
+
+  @include tablet_landscape {
+    max-width: $width-tablet-landscape;
+  }
+
+  @include navbar_btn {
+    .navbar__btn {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    max-width: $width-tablet;
+
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__link {
+      padding-right: unset;
+    }
+  }
+
+  @include mobile {
+    max-width: $width-mobile;
+    margin: 50px auto;
+
+    &__list {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__item {
+      height: unset;
+      margin: 5px auto;
+    }
+  }
+}

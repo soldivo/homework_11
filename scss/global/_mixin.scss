@@ -1,0 +1,36 @@
+@mixin center($max-width, $margin: 0 auto) {
+  margin: $margin;
+  max-width: $max-width;
+  padding: 0 5px;
+}
+
+@mixin size-height($size: 1rem, $height: 1rem) {
+  font-size: $size;
+  height: $height;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin container {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 3%;
+}
+
+@mixin title {
+  font-size: 2rem;
+  font-weight: 500;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+@mixin text {
+  color: $secondary-color;
+  line-height: 23px;
+  font-size: 1rem;
+  padding: 0 20px;
+}

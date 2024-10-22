@@ -1,0 +1,67 @@
+.hero {
+  @include center($desktop, 162px auto 141px);
+
+  &__design {
+    max-width: 540px;
+  }
+
+  &__title {
+    @include size-height(3rem, 45px);
+    font-weight: 500;
+  }
+
+  &__text {
+    @include size-height(1rem, 67px);
+    margin: 60px 0 65px;
+    line-height: 24px;
+    color: $secondary-color;
+  }
+
+  &__btn {
+    padding: 25px 52px;
+    border: none;
+    font-size: 0.8rem;
+    background: $additional-color;
+    color: $main-color;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+
+  @include desktop {
+    margin: 75px auto;
+    padding: 0 20px;
+
+    &__wrapper {
+      margin: 0 auto;
+    }
+  }
+
+  @include tablet_landscape {
+    max-width: $width-tablet-landscape;
+  }
+
+  @include tablet {
+    max-width: $width-tablet;
+
+    &__btn {
+      padding: 15px 30px;
+    }
+  }
+
+  @include mobile {
+    @include center($width-mobile, 50px auto);
+
+    &__title {
+      @include size-height(2rem, unset);
+    }
+
+    &__text {
+      margin: 20px auto;
+      height: unset;
+    }
+
+    &__btn {
+      padding: 10px 15px;
+    }
+  }
+}

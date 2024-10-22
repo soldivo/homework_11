@@ -1,0 +1,37 @@
+.footer {
+  color: $main-color;
+  background: $additional-color;
+  padding: 50px 0;
+
+  &__container {
+    @include center($desktop);
+  }
+
+  &__title {
+    @include size-height(1.31rem, 19px);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include size-height(0.81rem, 12px);
+  }
+
+  @include tablet-landscape {
+    &__container {
+      max-width: $width-tablet-landscape;
+    }
+  }
+
+  @include tablet {
+    &__container {
+      max-width: $width-tablet;
+    }
+  }
+
+  @include mobile {
+    &__container {
+      max-width: $width-mobile;
+    }
+  }
+}

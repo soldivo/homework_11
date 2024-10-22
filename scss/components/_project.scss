@@ -1,0 +1,89 @@
+.project {
+  background-color: $additional-color;
+  color: $main-color;
+  padding: 100px 0;
+
+  .project-container {
+    @include center($desktop);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__image {
+    @include width-height(50px, 50px);
+    margin-right: 20px;
+  }
+
+  &__number,
+  &__text {
+    color: $main-color;
+  }
+
+  &__number {
+    @include size-height(1.31rem, 19px);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include size-height(1rem, 15px);
+    width: 71px;
+  }
+
+  @include tablet-landscape {
+    &__container {
+      max-width: $width-tablet-landscape;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    &__image {
+      @include width-height(50px, 50px);
+      margin-right: 20px;
+    }
+
+    &__item {
+      justify-content: center;
+      width: calc(33% - 60px);
+      margin: 10px;
+    }
+
+    &__number {
+      margin-bottom: 10px;
+      height: 19px;
+    }
+
+    &__text {
+      @include width-height(71px, 15px);
+    }
+  }
+
+  @include tablet {
+    &__container {
+      max-width: 700px;
+      justify-content: center;
+    }
+
+    &__item {
+      width: unset;
+    }
+
+    &__image {
+      @include width-height(45px, 45px);
+    }
+  }
+
+  @include mobile {
+    &__container {
+      max-width: 500px;
+    }
+  }
+}
