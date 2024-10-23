@@ -118,10 +118,13 @@ body {
 .header .navbar {
   margin-bottom: 162px;
 }
-.header .navbar__list {
+.header .navbar-list {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+}
+.header .navbar .navbar-list--active {
+  display: block;
 }
 .header .navbar__item {
   font-size: 1rem;
@@ -129,6 +132,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
+  padding-bottom: 40px;
 }
 .header .navbar__link {
   display: block;
@@ -145,7 +149,7 @@ body {
   text-decoration: underline;
 }
 @media (max-width: 767px) {
-  .header .navbar__list {
+  .header .navbar-list {
     display: none;
     margin-top: 30px;
   }
@@ -155,7 +159,7 @@ body {
     margin: 75px auto;
     padding: 0 20px;
   }
-  .header__list {
+  .header-list {
     justify-content: center;
   }
 }
@@ -173,7 +177,7 @@ body {
   .header {
     max-width: 500px;
   }
-  .header__list {
+  .header-list {
     justify-content: space-between;
   }
   .header__link {
@@ -185,7 +189,7 @@ body {
     max-width: 350px;
     margin: 50px auto;
   }
-  .header__list {
+  .header-list {
     flex-direction: column;
     text-align: center;
   }
@@ -414,8 +418,8 @@ body {
   padding: 0 20px;
 }
 @media (max-width: 2000px) {
-  .work-video {
-    max-width: 2000px;
+  .work__container {
+    max-width: 900px;
   }
   .work .video iframe {
     width: 700px;
@@ -433,48 +437,26 @@ body {
     width: 500px;
     height: 300px;
   }
-  .work-video {
-    min-width: 1000px;
-  }
 }
 @media (max-width: 992px) {
-  .work__container {
-    max-width: 950px;
-  }
   .work .video {
-    max-width: 700px;
     height: 380px;
-  }
-  .work-video {
-    min-width: 950px;
   }
 }
 @media (max-width: 768px) {
-  .work__container {
-    max-width: 500px;
-  }
-  .work-video {
-    min-width: 500px;
-  }
   .work .video iframe {
     min-width: 400px;
     height: 300px;
   }
 }
 @media (max-width: 576px) {
-  .work__container {
-    max-width: 350px;
-  }
   .work__title {
     margin-bottom: 20px;
     font-size: 1.75rem;
   }
   .work .work-video iframe {
     min-width: 200px;
-    height: 100px;
-  }
-  .work-video {
-    min-width: 350px;
+    height: 300px;
   }
 }
 

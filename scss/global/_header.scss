@@ -55,10 +55,14 @@
   .navbar {
     margin-bottom: 162px;
 
-    &__list {
+    &-list {
       display: flex;
       justify-content: flex-start;
       flex-direction: row;
+    }
+
+    .navbar-list--active {
+      display: block;
     }
 
     &__item {
@@ -66,6 +70,7 @@
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 0.1em;
+      padding-bottom: 40px;
     }
 
     &__link {
@@ -88,7 +93,7 @@
   }
 
   @include navbar {
-    .navbar__list {
+    .navbar-list {
       display: none;
       margin-top: 30px;
     }
@@ -98,7 +103,7 @@
     margin: 75px auto;
     padding: 0 20px;
 
-    &__list {
+    &-list {
       justify-content: center;
     }
   }
@@ -116,7 +121,7 @@
   @include tablet {
     max-width: $width-tablet;
 
-    &__list {
+    &-list {
       justify-content: space-between;
     }
 
@@ -129,7 +134,7 @@
     max-width: $width-mobile;
     margin: 50px auto;
 
-    &__list {
+    &-list {
       flex-direction: column;
       text-align: center;
     }

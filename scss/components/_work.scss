@@ -21,8 +21,8 @@
   }
 
   @include xxl {
-    &-video {
-      max-width: 2000px;
+    &__container {
+      max-width: 900px;
     }
 
     .video iframe {
@@ -42,35 +42,16 @@
       width: 500px;
       height: 300px;
     }
-
-    &-video {
-      min-width: 1000px;
-    }
   }
 
   @include tablet-landscape {
-    &__container {
-      max-width: $width-tablet-landscape;
-    }
 
     .video {
-      max-width: 700px;
       height: 380px;
-    }
-
-    &-video {
-      min-width: $width-tablet-landscape;
     }
   }
 
   @include tablet {
-    &__container {
-      max-width: $width-tablet;
-    }
-
-    &-video {
-      min-width: $width-tablet;
-    }
 
     .video iframe {
       min-width: 400px;
@@ -79,9 +60,6 @@
   }
 
   @include mobile {
-    &__container {
-      max-width: $width-mobile;
-    }
 
     &__title {
       margin-bottom: 20px;
@@ -90,11 +68,7 @@
 
     .work-video iframe {
       min-width: 200px;
-      height: 100px;
-    }
-
-    &-video {
-      min-width: $width-mobile;
+      height: 300px;
     }
   }
 }
