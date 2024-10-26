@@ -54,7 +54,7 @@
   @include tablet {
 
     .video iframe {
-      min-width: 400px;
+      min-width: 300px;
       height: 300px;
     }
   }
@@ -66,8 +66,8 @@
       font-size: 1.75rem;
     }
 
-    .work-video iframe {
-      min-width: 200px;
+    .video iframe {
+      width: 100px;
       height: 300px;
     }
   }

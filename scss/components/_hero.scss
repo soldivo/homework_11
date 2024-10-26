@@ -20,7 +20,10 @@
   &__btn {
     padding: 25px 52px;
     border: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6406rem;
+    text-decoration: none;
     background: $additional-color;
     color: $main-color;
     letter-spacing: 0.1em;
